@@ -1,7 +1,27 @@
-
+import Chat from "./Chat.jsx"
+import "./ChatWindow.css"
 
 export default function ChatWindow() {
     return (
-        <div>ChatWindow</div>
+        <div className="chatWindow">
+            <div className="navbar">
+                <span>SigmaGPT <i className="fa-solid fa-chevron-down"></i></span>
+                <div className="userIconDiv">
+                    <span className="userIcon"><i className="fa-solid fa-user"></i></span>
+                </div>
+            </div>
+            <Chat></Chat>
+            <div className="chatInput">
+                <div className="inputBox">
+                    <input placeholder="Ask anything" >
+
+                    </input>
+                    <div id="submit" ><i className="fa-solid fa-paper-plane"></i></div>
+                </div>
+                <p className="info">
+                    AskBOT can make mistakes. Check important info. See Cookie Preferences.
+                </p>
+            </div>
+        </div>
     )
 }

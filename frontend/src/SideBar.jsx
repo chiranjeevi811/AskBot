@@ -12,7 +12,7 @@ export default function SideBar() {
             </ul>
 
             <div className="sign">
-                <p>By ApnaCollege &hearts;</p>
+                <p>By Chiranjeevi  &hearts;</p>
             </div>
         </section>
     )
