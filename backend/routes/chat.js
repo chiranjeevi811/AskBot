@@ -3,6 +3,12 @@ import Thread from "../models/Thread.js";
 import getOpenAIAPIResponse from "../utils/groq.js";
 const router = express.Router();
 
+app.get("/", (req, res) => {
+  res.json({
+    status: "AskBot Backend is running 🚀",
+  });
+});
+
 //test
 router.post("/test", async (req, res) => {
   try {
