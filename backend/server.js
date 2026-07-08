@@ -14,6 +14,12 @@ const groq = new Groq({
   apiKey: process.env.GROQ_API_KEY,
 });
 
+app.get("/", (req, res) => {
+  res.json({
+    status: "AskBot Backend is running 🚀",
+  });
+});
+
 app.listen(PORT, () => {
   console.log(`server running on ${PORT}`);
   connectDB();
