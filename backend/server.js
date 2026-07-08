@@ -19,17 +19,18 @@ app.get("/", (req, res) => {
     status: "AskBot Backend is running 🚀",
   });
 });
-
-app.listen(PORT, () => {
-  console.log(`server running on ${PORT}`);
-  connectDB();
-});
-
 const connectDB = async () => {
   try {
+    console.log("Mongo URI:", process.env.MONGODB_URI);
+
     await mongoose.connect(process.env.MONGODB_URI);
+
     console.log("Connected with Database!");
   } catch (err) {
     console.log("Failed to connect with Db", err);
   }
 };
+app.listen(PORT, () => {
+  console.log(`server running on ${PORT}`);
+  connectDB();
+});
